@@ -1,0 +1,27 @@
+{
+    "_from": "urxvt@^9.22",
+    "_resolved": "http://dist.schmorp.de/rxvt-unicode/Attic/rxvt-unicode-9.22.tar.bz2",
+    "_spec": "urxvt@^9.22",
+    "homepage": "http://software.schmorp.de/pkg/rxvt-unicode.html",
+    "license": "MIT",
+    "version": "9.22",
+    "zsh-data": {
+        "plugin-info": {
+            "version": "9.22",
+            "requires": "monitor",
+            "url": "http://dist.schmorp.de/rxvt-unicode/Attic/"
+        },
+        "zplugin-ices": {
+            "default": {
+                "is-snippet": "",
+                "lucid": "",
+                "as": "null|monitor",
+                "dlink": "!rxvt-unicode-%VERSION%.tar.bz2",
+                "mv": "%ID% → pkg.tbz2",
+                "atclone": "ziextract --move pkg.tbz2; m {nl}{msg2}Building {obj}Rxvt-Unicode{msg2}...{rst}{nl}; ./configure --prefix='$ZPFX' --enable-everything --enable-256-color >/dev/null && make >/dev/null && m {nl}{msg2}Installing {obj}Rxvt-Unicode{msg2} to $ZPFX...{rst}{nl} && make install >/dev/null && m {nl}{success}Installation of Rxvt-Unicode succeeded.{rst} || m {nl}{ehi}Installation of Rxvt-Unicode failed.{rst}",
+                "atpull": "%atclone",
+                "nocompile": ""
+            }
+        }
+    }
+}
